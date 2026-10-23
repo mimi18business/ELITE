@@ -61,6 +61,15 @@ footer{padding-block:28px;color:var(--muted);font-size:.9rem;border-top:1px soli
 .bar{position:fixed;inset:auto 0 0 0;z-index:20;display:flex;gap:10px;padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));background:var(--bg);border-top:1px solid var(--line)}
 .bar .btn{flex:1;min-height:46px;padding:0 10px}
 .tabs{display:flex;gap:8px;margin-top:24px;flex-wrap:wrap}.tab{min-height:44px;padding:0 20px;border-radius:99px;border:1px solid var(--line);background:transparent;color:var(--fg);font:700 .95rem Cairo,sans-serif;cursor:pointer}.tab[aria-selected=true]{background:var(--accent);color:var(--accent-fg);border-color:var(--accent)}.pk{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:20px}.pk article{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:22px;display:grid;gap:10px;align-content:start;min-width:0}.pk .hot{border:2px solid var(--gold)}.pk .tag{position:absolute;top:-13px;inset-inline-start:18px;background:var(--gold);color:var(--bg);font:700 .8rem Cairo,sans-serif;padding:2px 12px;border-radius:99px}.pk .pr{font:800 2rem/1.1 Cairo,sans-serif;color:var(--accent)}.pk .pr small{font:600 .85rem Cairo,sans-serif;color:var(--muted)}.pk ul{list-style:none;margin:0;padding:0;display:grid;gap:6px;color:var(--muted);font-size:.95rem;line-height:1.5}.pk li::before{content:"✓ ";color:var(--accent);font-weight:800}.pk .btn{margin-top:6px;min-height:44px}[hidden]{display:none!important}
+.bk{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:28px;display:grid;gap:16px}
+.bk form{display:grid;grid-template-columns:1fr 1fr;gap:14px}.bk .full{grid-column:1/-1}
+.bk label{display:block;font-weight:700;font-size:.9rem;margin-bottom:4px}
+.bk input,.bk select,.bk textarea{width:100%;font:400 1rem Cairo,sans-serif;padding:12px 14px;border:1.5px solid var(--line);border-radius:12px;background:var(--bg);color:var(--fg)}
+.bk textarea{min-height:84px;resize:vertical}
+.bk .hp{position:absolute;width:1px;height:1px;opacity:0;overflow:hidden;clip:rect(0 0 0 0)}
+#bmsg{font-weight:700;min-height:26px}#bmsg.ok{color:var(--wa)}#bmsg.err{color:#d23b3b}
+#bdone[hidden]{display:none}
+@media(max-width:720px){.bk form{grid-template-columns:1fr}.bk{padding:20px}}
 @media(max-width:720px){.hero{grid-template-columns:1fr}.price{grid-template-columns:1fr;padding:24px}}
 @media(min-width:900px){.bar{display:none}body{padding-block-end:0}}
 </style></head><body>
@@ -78,7 +87,7 @@ footer{padding-block:28px;color:var(--muted);font-size:.9rem;border-top:1px soli
   <h1>استوديو تصوير نسائي في الشراقة — خصوصية 100%</h1>
   <p class="lead">5 استوديوهات احترافية في مكان واحد لتصوير منتجاتك، أزيائك، محتواك ودوراتك. فريق نسائي بالكامل وجلسة من 3 ساعات ابتداءً من 5,000 دج.</p>
   <div class="cta">
-   <a class="btn btn-p" href="https://cal.com/dounia1academy/%D8%AD%D8%AC%D8%B2-%D8%A7%D8%B3%D8%AA%D9%88%D8%AF%D9%8A%D9%88-%D8%A7%D9%84%D9%8A%D8%AA" target="_blank" rel="noopener">احجزي موعدك الآن</a>
+   <a class="btn btn-p" href="#book">احجزي موعدك الآن</a>
    <a class="btn btn-w" href="https://wa.me/213782076898?text=%D8%B3%D8%AA%D9%88%D8%AF%D9%8A%D9%88" target="_blank" rel="noopener"><b>●</b> واتساب</a>
   </div>
   <div class="trust"><span>نساء فقط</span><span>3 ساعات</span><span>حجز بدون اتصال</span><a href="#location" style="color:inherit">📍 الموقع على الخريطة</a></div>
@@ -124,7 +133,34 @@ footer{padding-block:28px;color:var(--muted);font-size:.9rem;border-top:1px soli
   <li><h3>نؤكد معك</h3><p>نتواصل معك لتأكيد التفاصيل قبل الجلسة.</p></li>
   <li><h3>تعالي وصوّري</h3><p>فريق نسائي ينتظرك في الشراقة.</p></li>
  </ol>
- <div class="cta" style="margin-top:28px"><a class="btn btn-p" href="https://cal.com/dounia1academy/%D8%AD%D8%AC%D8%B2-%D8%A7%D8%B3%D8%AA%D9%88%D8%AF%D9%8A%D9%88-%D8%A7%D9%84%D9%8A%D8%AA" target="_blank" rel="noopener">اختاري موعدك</a></div>
+ <div class="cta" style="margin-top:28px"><a class="btn btn-p" href="#book">اختاري موعدك</a></div>
+</section>
+
+<section id="book">
+ <div class="bk">
+  <span class="eyebrow">احجزي مكانك</span>
+  <h2>اطلبي حجزك في دقيقة</h2>
+  <p class="sub">املئي الاستمارة فيصلنا طلبك فوراً ونتواصل معك لتأكيد الموعد. ويمكنك أيضاً اختيار الموعد بنفسك من التقويم.</p>
+  <form id="bf" novalidate>
+   <div><label for="bn">الاسم الكامل</label><input id="bn" name="name" autocomplete="name" required></div>
+   <div><label for="bp">رقم الهاتف / واتساب</label><input id="bp" name="phone" inputmode="tel" autocomplete="tel" dir="ltr" placeholder="0xxxxxxxxx" required></div>
+   <div class="full"><label for="bs">الباقة المطلوبة</label><select id="bs" name="service" required>
+    <option value="">اختاري الباقة</option>
+    <optgroup label="أصحاب المشاريع"><option>أصحاب المشاريع — الباقة العادية (5,000 دج)</option><option>أصحاب المشاريع — باقة VIP (18,000 دج)</option><option>أصحاب المشاريع — الباقة الشهرية (40,000 دج)</option><option>أصحاب المشاريع — فيديوهات طويلة (65,000 دج)</option></optgroup>
+    <optgroup label="المدربات والمدربون"><option>مدربات — الباقة العادية (5,000 دج)</option><option>مدربات — باقة VIP (25,000 دج)</option><option>مدربات — الباقة الشهرية (45,000 دج)</option><option>مدربات — فيديوهات طويلة (85,000 دج)</option></optgroup>
+    <option>لم أحدد بعد، أحتاج استشارة</option></select></div>
+   <div><label for="ba">نوع نشاطك (اختياري)</label><select id="ba" name="activity"><option value="">اختاري</option><option>مدربة</option><option>صاحبة مشروع / متجر</option><option>صانعة محتوى</option><option>مستشارة</option><option>نشاط آخر</option></select></div>
+   <div><label for="bd">الموعد المفضل (اختياري)</label><input id="bd" name="when" placeholder="مثال: السبت صباحاً"></div>
+   <div class="full"><label for="bt">ما الذي تريدين تصويره؟ (اختياري)</label><textarea id="bt" name="details" placeholder="منتجات، ريلز، دورة، بورتريه..."></textarea></div>
+   <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+   <div class="full"><button class="btn btn-p" type="submit" id="bb">إرسال طلب الحجز</button> <span id="bmsg" role="status" aria-live="polite"></span></div>
+  </form>
+  <div id="bdone" hidden>
+   <p><b>وصل طلبك ✓</b> سنتواصل معك قريباً. وإن أردتِ تثبيت الموعد الآن:</p>
+   <div class="cta" style="margin-top:10px"><a class="btn btn-p" href="https://cal.com/dounia1academy/%D8%AD%D8%AC%D8%B2-%D8%A7%D8%B3%D8%AA%D9%88%D8%AF%D9%8A%D9%88-%D8%A7%D9%84%D9%8A%D8%AA?overlayCalendar=true" target="_blank" rel="noopener">اختاري الموعد من التقويم</a></div>
+  </div>
+  <p class="sub">أو احجزي مباشرة من التقويم: <a href="https://cal.com/dounia1academy/%D8%AD%D8%AC%D8%B2-%D8%A7%D8%B3%D8%AA%D9%88%D8%AF%D9%8A%D9%88-%D8%A7%D9%84%D9%8A%D8%AA?overlayCalendar=true" target="_blank" rel="noopener" style="color:var(--accent);font-weight:700">صفحة الحجز</a></p>
+ </div>
 </section>
 
 <section id="faq">
@@ -155,7 +191,7 @@ footer{padding-block:28px;color:var(--muted);font-size:.9rem;border-top:1px soli
   <h2>جاهزة؟ احجزي أو راسلينا</h2>
   <div class="num-box"><code id="n">0782076898</code><button id="cp" type="button">نسخ الرقم</button></div>
   <div class="cta">
-   <a class="btn btn-p" href="https://cal.com/dounia1academy/%D8%AD%D8%AC%D8%B2-%D8%A7%D8%B3%D8%AA%D9%88%D8%AF%D9%8A%D9%88-%D8%A7%D9%84%D9%8A%D8%AA" target="_blank" rel="noopener">احجزي الآن</a>
+   <a class="btn btn-p" href="#book">احجزي الآن</a>
    <a class="btn btn-w" href="https://wa.me/213782076898?text=%D8%B3%D8%AA%D9%88%D8%AF%D9%8A%D9%88" target="_blank" rel="noopener"><b>●</b> واتساب</a>
   </div>
  </div>
@@ -166,7 +202,7 @@ footer{padding-block:28px;color:var(--muted);font-size:.9rem;border-top:1px soli
 </div>
 
 <div class="bar">
- <a class="btn btn-p" href="https://cal.com/dounia1academy/%D8%AD%D8%AC%D8%B2-%D8%A7%D8%B3%D8%AA%D9%88%D8%AF%D9%8A%D9%88-%D8%A7%D9%84%D9%8A%D8%AA" target="_blank" rel="noopener">احجزي</a>
+ <a class="btn btn-p" href="#book">احجزي</a>
  <a class="btn btn-w" href="https://wa.me/213782076898?text=%D8%B3%D8%AA%D9%88%D8%AF%D9%8A%D9%88" target="_blank" rel="noopener"><b>●</b> واتساب</a>
 </div>
 
@@ -184,6 +220,19 @@ footer{padding-block:28px;color:var(--muted);font-size:.9rem;border-top:1px soli
   document.getElementById('p-biz').hidden=t.dataset.t!=='biz';
   document.getElementById('p-tr').hidden=t.dataset.t!=='tr';
  })});
+
+ (function(){var f=document.getElementById('bf');if(!f)return;var m=document.getElementById('bmsg'),b=document.getElementById('bb');
+ f.addEventListener('submit',function(e){e.preventDefault();m.className='';
+  var n=f.name.value.trim(),p=f.phone.value.replace(/[^0-9+]/g,''),s=f.service.value;
+  if(n.length<3){m.className='err';m.textContent='اكتبي اسمك الكامل.';f.name.focus();return}
+  if(p.replace(/\D/g,'').length<9){m.className='err';m.textContent='اكتبي رقم هاتف صحيحاً.';f.phone.focus();return}
+  if(!s){m.className='err';m.textContent='اختاري الباقة.';f.service.focus();return}
+  b.disabled=true;m.textContent='جاري الإرسال…';
+  var d=f.details.value.trim(),w=f.when.value.trim();
+  var q=new URLSearchParams({name:n,phone:p,email:'',activity:f.activity.value,service:s,details:(w?'الموعد المفضل: '+w+(d?' | ':''):'')+d,website:f.website.value});
+  fetch('https://n8n.dounia1acdemy.com/webhook/elite-studio-booking',{method:'POST',body:q}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(j){if(!j.ok)throw 0;f.reset();f.hidden=true;m.textContent='';document.getElementById('bdone').hidden=false})
+  .catch(function(){m.className='err';m.textContent='لم يُرسل الطلب. جرّبي مرة أخرى أو راسلينا على واتساب.'}).then(function(){b.disabled=false})});
+ })();
  var b=document.getElementById('cp');
  b.addEventListener('click',function(){
   var t='0782076898';
